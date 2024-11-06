@@ -10,7 +10,7 @@ namespace SensiveProject.DataAccessLayer.Abstract
     {
         void Insert(T entity);
         void Delete(int id);
-        void Upgdate(T entity);
+        void Update(T entity);
         List<T> GetAll();
         T GetById(int id);
     }
