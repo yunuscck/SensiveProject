@@ -1,0 +1,27 @@
+﻿@model Article
+@{
+    Layout = null;
+}
+<link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Makale Başlığı</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label>Makale Açıklaması</label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <br />
+        <label>Kapak Foto URL</label>
+        <input type="text" asp-for="CoverImageUrl" class="form-control" />
+        <br />
+        <label>Kategori</label><br />
+        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.v1,new {@class="form-control"})
+        @* @Html.DropDownListFor(x=>x.AppUserId,(List<SelectListItem>)ViewBag.v2,new {@class="form-cpntrol"}) *@
+        <br />
+        <label>Kullanıcı</label>
+        <input type="text" asp-for="ArticleId" class="form-control" />
+        <br />
+        <button class="btn btn-info">Makale Ekle</button>
+    </form>
+</div>
